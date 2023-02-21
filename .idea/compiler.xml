@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Pong" target="8" />
+      <module name="Pong" target="1.8" />
       <module name="Pong2" target="8" />
     </bytecodeTargetLevel>
   </component>

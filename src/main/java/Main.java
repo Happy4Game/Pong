@@ -35,7 +35,7 @@ public class Main extends Application {
 
 
             Rectangle player1 = new Rectangle(10, 200, 15.0, 80.0);
-            Rectangle IA = new Rectangle(975, 200, 15.0, 80.0);
+            Rectangle IA = new Rectangle(960, 200, 15.0, 80.0);
 
             Text txt = new Text("Perdu !");
             txt.setScaleX(10);
@@ -68,21 +68,22 @@ public class Main extends Application {
             //Task repeat
             Timeline timeline = new Timeline(new KeyFrame(Duration.millis(20), e -> {
                 //Collision de la balle sur les extr�mit�s haut et bas
-                if (circle.getCenterY() + circle.getRadius() == 500) {
+                if (circle.getCenterY() + circle.getRadius() == 480 - circle.getRadius()) {
                     vertical = -5;
-                } else if (circle.getCenterY() + circle.getRadius() == 0) {
+                } else if (circle.getCenterY() + circle.getRadius() == 10 + circle.getRadius()) {
                     vertical = 5;
                 }
 
                 //If ball touch player
-                if (circle.getCenterX() + circle.getRadius() == player1.getX() +2 * player1.getWidth()) {
-                    if (circle.getCenterY() + 25 >= player1.getY() && circle.getCenterY() + 25 <= player1.getY() + player1.getHeight() + 5) {
+                if (circle.getCenterX() - circle.getRadius() <= player1.getX() + player1.getWidth()) {
+                    if (circle.getCenterY() <= player1.getY() + player1.getHeight() &&
+                        circle.getCenterY() >= player1.getY()) {
                         horizontal = 5;
                     }
                 }
 
                 //If ball touch player IA
-                if (circle.getCenterX() + circle.getRadius() == IA.getX()) {
+                else if (circle.getCenterX() + circle.getRadius() == IA.getX()) {
                     if (circle.getCenterY() + 25 >= IA.getY() && circle.getCenterY() + 25 <= IA.getY() + IA.getHeight()) {
                         horizontal = -5;
                     }
@@ -108,7 +109,7 @@ public class Main extends Application {
             primaryStage.setResizable(false);
             primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("icon.png")));
             primaryStage.show();
-            Thread.sleep(2000);
+            Thread.sleep(500);
             timeline.play();
         } catch (Exception e) {
             e.printStackTrace();

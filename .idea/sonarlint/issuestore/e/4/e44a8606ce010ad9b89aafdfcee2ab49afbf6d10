@@ -1,0 +1,16 @@
+
+L
+java:S1066W"/Merge this if statement with the enclosing one.(ûğ‘Ğ8ÿÄÊ¤ç0
+f	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁëÃ‡
+0
+java:S1220""Move this file to a named package.
+{
+java:S1450"YRemove the "horizontal" field and declare it as a local variable in the relevant methods.(Ïğ¿‹şÿÿÿÿ8¤‡¿¤ç0
+y
+java:S1450"WRemove the "vertical" field and declare it as a local variable in the relevant methods.(…º»ùÿÿÿÿ8¥‡¿¤ç0
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(Éß÷øÿÿÿÿ
+t
+java:S2142r"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾
+`
+java:S3252g"EUse static access with "javafx.animation.Animation" for "INDEFINITE".(Êı şÿÿÿÿ
